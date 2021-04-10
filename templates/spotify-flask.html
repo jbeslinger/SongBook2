@@ -1,0 +1,62 @@
+<html>
+<head>
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<!-- icons cdn -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/4.15.0/1001tracklists.min.js" integrity="sha512-Q7JRUZk4wv3GGVI2edmxyu86wUXY+rlV5w26e985rQZiUefgnU5VtKjFlMz66iluDVAAawc2lpnq70CyScL4oQ==" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<div class="container content">
+		<div class="row">
+			<div class="twelve columns">
+				<h1>SPOTify Tracks</h1>
+			</div>
+		</div>
+		<form class="form" action = "/" method = "post">
+			<div class="row">
+				<div class="ten columns">	
+					<p class="text_box">
+						<input class="text_box_input" type="text" placeholder="Surf for an artist or song" name = "nm" />
+					</p>
+				</div>
+				<div class="two columns">
+					<input class="submit_button whitebtn" type = "submit" value = "submit" />
+				</div>
+			</div>
+		</form>
+
+		{% if tracks %} 
+		<p>Here are the top 10 tracks</p>
+		{% for track in tracks %}
+		{% endfor %}
+		{% endif %}
+	</div>
+	<footer class="row footer">
+					
+		<p class="twelve columns">Made by <strong>Himanshu Kamal</strong></p>
+		<p class="twelve columns">
+			Hosted on
+			<a href="https://github.com/himanshukamal/spotify-music">
+			<span class="white_icon"><i class="fab fa-github"></i></span>
+			</a>
+		</p>
+		<p class="twelve columns">
+			<span class="white_icon"><i class="fab fa-python"></i></span>
+			<span class="white_icon"><i class="fab fa-spotify"></i></span>
+			<span class="white_icon"><i class="fab fa-html5"></i></span>
+			<span class="white_icon"><i class="fab fa-font-awesome"></i></span>
+			<span class="white_icon"><i class="fab fa-css3-alt"></i></span>
+			<!-- <img class="footer_icon white_icon" src="{{url_for('static',filename='icons/flask.svg')}}"> -->
+			<!-- <img class="footer_icon" src="{{url_for('static',filename='icons/heroku.svg')}}"> -->
+			<!-- <img class="footer_icon white_icon" src="{{url_for('static',filename='icons/jinja.svg')}}"> -->
+		</p>	
+	</footer>
+</body>
+</html>
