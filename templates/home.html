@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SongBook</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='logo.png') }}" style="height: 50px;" className="App-logo" alt="logo"></img>
+		<h1>Welcome to SongBook</h1>
+		<h2>Type in your search terms:</h2>
+		<form action='/' method="post">
+			<input type='text' id="song_name" name='song_name' placeholder='Song' />
+			<input type='text' id="artist_name" name='artist_name' placeholder='Artist' /><br />
+			<input type='submit' value='Search' />
+		</form>
+
+        {% if tracks %}
+        {% for track in tracks %}
+        <!-- Put track listing information here -->
+        <!-- Reference code -->
+        <!-- https://github.com/himanshukamal/spotify-music/blob/main/templates/spotify-flask.html -->
+        <p>These are where the results would go</p>
+        {% endfor %}
+		{% endif %}
+</body>
+</html>
