@@ -6,36 +6,29 @@ body {
     serif;
 }
 
-.pickhacks_logo {  
-
-}
-
-.subtitle {
-
-}
-
-.search_form {
-
+.pickhacks_logo {
+  padding: 10px;
 }
 
 .song_textbox {
-
+  text-align: center;
+  color: white;
+  background-color: #ff1493;
+  box-align: center;
 }
 
 .artist_textbox {
-
+  text-align: center;
+  color: white;
+  background-color: #daa520;
 }
 
 .search_button {
-
-}
-
-.table_column {
-
+  cursor: pointer;
 }
 
 .music_player {
-  text-align: center;
+  text-align: left;
 }
 
 .album_art {
@@ -49,6 +42,7 @@ body {
   color: white;
   font-size: x-large;
   padding: 10px;
+  text-align: center;
 }
 
 .album {
@@ -78,5 +72,10 @@ body {
 }
 
 .error {
-    
+  color: red;
+  font-size: large;
+}
+
+.search_again {
+  text-align: right;
 }
