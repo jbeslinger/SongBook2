@@ -5,25 +5,25 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <img src="{{ url_for('static', filename='logo.png') }}" style="height: 50px;" className="App-logo" alt="logo"></img>
-		<h1>Welcome to SongBook!</h1>
-		<h2>Type in your search terms:</h2>
-		<form action='/' method="post">
-			<input type='text' id="song_name" name='song_name' placeholder='Song' />
-			<input type='text' id="artist_name" name='artist_name' placeholder='Artist' /><br />
-			<input type='submit' value='Search' />
+    <img class="pickhacks_logo" src="{{ url_for('static', filename='logo.png') }}" style="height: 50px;" className="App-logo" alt="logo"></img>
+		<h1 class="title">Welcome to SongBook!</h1>
+		<h2 class="subtitle">Type in your search terms:</h2>
+		<form action='/' method="post" class="search_form">
+			<input class="song_textbox" type='text' id="song_name" name='song_name' placeholder='Song' />
+			<input class="artist_textbox" type='text' id="artist_name" name='artist_name' placeholder='Artist' /><br />
+			<input class="search_button" type='submit' value='Search' />
 		</form>
 
         {% if track %}
         <!-- Put track listing information here -->
-        <table>
+        <table style="margin-left: auto; margin-right: auto;">
         <tr>
-            <td>
+            <td class="table_column">
                 <!-- Temporary image -->
-                <iframe src="https://open.spotify.com/embed/track/4dd9GGN2kHb1d28yGL578m" width="300" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe style="music_player" src="https://open.spotify.com/embed/track/4dd9GGN2kHb1d28yGL578m" width="300" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 <p class="popularity"><img src="{{ url_for('static', filename='heart.png') }}"> {{ track[5] }}%</p>
             </td>
-            <td>
+            <td class="table_column">
                 <p class="title">Title: {{ track[0] }}</p>
                 <p class="album">Album: {{ track[1] }}</p>
                 <p class="artist">Artist: {{ track[2] }}</p>
@@ -31,6 +31,7 @@
             </td>
         </tr>
         </table>
+
         <span class="search_again">
             Not what you were looking for?<br />
             <a href="/">Click here to search again</a>
