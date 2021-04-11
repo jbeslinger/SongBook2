@@ -60,9 +60,14 @@ def login():
 		song_url = items[0]['external_urls']['spotify']
 		album_url = items[0]['album']['external_urls']['spotify']
 		song_uri = items[0]['uri']
+		dict1= song_url.split("com")
+		add_string = "com/embed"
+		embed_song =dict1[0] + add_string + dict1[1]            
 		track_info = getTrackFeatures(song_uri)
 		track_info.append(song_url)
 		track_info.append(album_url)
+		track_info.append(embed_song)
+		print(embed_song)
 		print(track_info)
 		return render_template('index.html', track=track_info)
 		# return jsonify(results)
