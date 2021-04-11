@@ -1,30 +1,52 @@
-html, body {
-    color:white;
-    background-color: black;
+html,
+body {
+  color: white;
+  background-color: black;
+  font-family: Garamond, Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
 }
 
 .music_player {
-    
+  text-align: center;
 }
 
 .album_art {
-
+  border-radius: 10px;
 }
 
 .title {
-
+  background-color: #1e90ff;
+  display: inline;
+  border-radius: 4px;
+  color: white;
+  font-size: x-large;
+  padding: 10px;
 }
 
 .album {
-
+  background-color: #ff1493;
+  display: inline;
+  border-radius: 4px;
+  color: white;
+  font-size: x-large;
+  padding: 10px;
 }
 
 .artist {
-
+  background-color: #daa520;
+  display: inline;
+  border-radius: 4px;
+  color: white;
+  font-size: x-large;
+  padding: 10px;
 }
 
 .popularity {
-
+  background-color: grey;
+  display: inline;
+  border-radius: 4px;
+  color: white;
+  padding: 3px;
 }
 
 .error {
