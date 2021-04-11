@@ -56,8 +56,8 @@ def login():
 		#print(json.dumps(items, indent= 4))
 		song_uri = items[0]['uri']
 		track_info = getTrackFeatures(song_uri)
-		#print(track_info)
-		return render_template('index.html', tracks=track_info)
+		print(track_info)
+		return render_template('index.html', track=track_info)
 		# return jsonify(results)
 	else: # GET
 		user = request.args.get('song_name')
@@ -66,4 +66,3 @@ def login():
 
 if __name__ == '__main__':
 	app.run(debug = True)
-	

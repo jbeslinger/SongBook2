@@ -14,11 +14,27 @@
 			<input type='submit' value='Search' />
 		</form>
 
-        {% if tracks %}
+        {% if track %}
         <!-- Put track listing information here -->
-        <!-- Reference code -->
-        <!-- https://github.com/himanshukamal/spotify-music/blob/main/templates/spotify-flask.html -->
-        <p>This is where the results of the search is written</p>
+        <table>
+        <tr>
+            <!-- Put music player here -->
+            <div class="music_player">Temporary placeholder for music player</div>
+        </tr>
+        <tr>
+            <td>
+                <!-- Temporary image -->
+                <img class="album_art" alt="Album Art" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/08/Justin_Bieber_-_Justice.png/220px-Justin_Bieber_-_Justice.png"  />
+                <p class="popularity"><img src="{{ url_for('static', filename='heart.png') }}"> {{ track[5] }}%</p>
+            </td>
+            <td>
+                <p class="title">Title: {{ track[0] }}</p>
+                <p class="album">Album: {{ track[1] }}</p>
+                <p class="artist">Artist: {{ track[2] }}</p>
+                <p class="release_date">Released: {{ track[3] }}</p>
+            </td>
+        </tr>
+        </table>
 		{% endif %}
 </body>
 </html>
