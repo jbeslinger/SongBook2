@@ -19,40 +19,44 @@
         <table style="margin-left: auto; margin-right: auto;">
         <tr>
             <td class="table_column">
-                <!-- Temporary image -->
                 <iframe style="music_player" src={{track[-1]}} width="300" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <br />
                 <p class="popularity"><img src="{{ url_for('static', filename='heart.png') }}"> {{ track[5] }}%</p>
             </td>
             <td class="table_column">
                 <p class="title">Title: {{ track[0] }}</p>
                 <p class="album">Album: {{ track[1] }}</p>
                 <p class="artist">Artist: {{ track[2] }}</p>
-                <p class="release_date">Released: {{ track[3] }}</p>
-                <p class="length">Length: {{ track[4] }} seconds</p>
-                <p class="danceability">Danceability: {{ track[6] }}</p>
-                <p class="acousticness">Acousticness: {{ track[7] }}</p>
-                <p class="energy">Energy: {{ track[9] }}</p>
-                <p class="instrumentalness">Instrumentalness: {{ track[10] }}</p>
-                <p class="liveness">Liveness: {{ track[11] }}</p>
-                <p class="loudness">Loudness: {{ track[12] }}</p>
-                <p class="speechiness">Speechiness: {{ track[13] }}</p>
-                <p class="tempo">Tempo: {{ track[14] }}</p>
-                <p class="time_signature">Time_signature: {{ track[15] }}</p>
+                <div class="extra_data"><b>
+                    <p class="release_date">Released: {{ track[3] }}</p>
+                    <p class="length">Length: {{ track[4] }} seconds</p>
+                    <p class="danceability">Danceability: {{ track[6] }}</p>
+                    <p class="acousticness">Acousticness: {{ track[7] }}</p>
+                    <p class="energy">Energy: {{ track[9] }}</p>
+                    <p class="instrumentalness">Instrumentalness: {{ track[10] }}</p>
+                    <p class="liveness">Liveness: {{ track[11] }}</p>
+                    <p class="loudness">Loudness: {{ track[12] }}</p>
+                    <p class="speechiness">Speechiness: {{ track[13] }}</p>
+                    <p class="tempo">Tempo: {{ track[14] }}</p>
+                    <p class="time_signature">Time_signature: {{ track[15] }}</p>
+                </b></div>
             </td>
         </tr>
         </table>
 
-        <span class="search_again">
-            Not what you were looking for?<br />
-            <a href="/">Click here to search again</a>
-        </span>
+        <div class="search_again">
+            <p>
+                Not what you were looking for?<br />
+                <a href="/">Click here to search again</a>
+            </p>
+        </div>
 		{% endif %}
 
         {% if no_results_err %}
         <!-- Throw an error element to the screen -->
-        <span class="error">
-            🤷 Our search produced no results! <a href="/">Try again?</a>
-        </span>
+        <p class="error">
+            🤷 Our search produced no results! <b><a style="color: white;" href="/">Try again?</a></b>
+        </p>
         {% endif %}
 </body>
 </html>

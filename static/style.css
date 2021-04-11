@@ -12,19 +12,36 @@ body {
 
 .song_textbox {
   text-align: center;
-  color: white;
-  background-color: #ff1493;
+  color: black;
+  padding: 4px;
+  margin: 8px;
   box-align: center;
+}
+
+.search_form {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
 }
 
 .artist_textbox {
   text-align: center;
-  color: white;
-  background-color: #daa520;
+  color: black;
+  padding: 4px;
 }
 
 .search_button {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  display: flex;
   cursor: pointer;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 32px;
+  padding-right: 32px;
+  color: white;
+  background-color: #b39d0c;
 }
 
 .music_player {
@@ -36,12 +53,25 @@ body {
 }
 
 .title {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
   background-color: #1e90ff;
-  display: inline;
   border-radius: 4px;
   color: white;
   font-size: x-large;
   padding: 10px;
+  text-align: center;
+}
+
+.subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  background-color: #ff1493;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: medium;
   text-align: center;
 }
 
@@ -64,18 +94,42 @@ body {
 }
 
 .popularity {
-  background-color: grey;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  background-color: darkslateblue;
   display: inline;
   border-radius: 4px;
   color: white;
-  padding: 3px;
+  padding: 6px;
 }
 
 .error {
-  color: red;
-  font-size: large;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  background-color: darkorange;
+  border-radius: 4px;
+  color: white;
+  font-size: medium;
+  padding: 10px;
+  text-align: center;
 }
 
 .search_again {
+  margin-left: auto;
+  
   text-align: right;
+  color: white;
+  background-color: darkorange;
+  border-radius: 4px;
+  width: fit-content;
+  font-size: medium;
+  padding: 10px;
+}
+
+.extra_data {
+  background-color: #00c44e;
+  padding: 8px;
+  margin: 32px;
 }
