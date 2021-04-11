@@ -20,7 +20,7 @@
         <tr>
             <td class="table_column">
                 <!-- Temporary image -->
-                <iframe style="music_player" src="https://open.spotify.com/embed/track/4dd9GGN2kHb1d28yGL578m" width="300" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe style="music_player" src={{track[-1]}} width="300" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 <p class="popularity"><img src="{{ url_for('static', filename='heart.png') }}"> {{ track[5] }}%</p>
             </td>
             <td class="table_column">
