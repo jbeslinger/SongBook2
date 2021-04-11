@@ -54,6 +54,9 @@ def login():
 		#print(results)
 		items = results['tracks']['items']
 		#print(json.dumps(items[0]['album']['external_urls']['spotify'], indent= 4))
+		if not items:
+			print("No results found")
+			return render_template('index.html', no_results_err=True)
 		song_url = items[0]['external_urls']['spotify']
 		album_url = items[0]['album']['external_urls']['spotify']
 		song_uri = items[0]['uri']

@@ -6,7 +6,7 @@
 </head>
 <body>
     <img src="{{ url_for('static', filename='logo.png') }}" style="height: 50px;" className="App-logo" alt="logo"></img>
-		<h1>Welcome to SongBook</h1>
+		<h1>Welcome to SongBook!</h1>
 		<h2>Type in your search terms:</h2>
 		<form action='/' method="post">
 			<input type='text' id="song_name" name='song_name' placeholder='Song' />
@@ -18,13 +18,9 @@
         <!-- Put track listing information here -->
         <table>
         <tr>
-            <!-- Put music player here -->
-            <div class="music_player">Temporary placeholder for music player</div>
-        </tr>
-        <tr>
             <td>
                 <!-- Temporary image -->
-                <img class="album_art" alt="Album Art" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/08/Justin_Bieber_-_Justice.png/220px-Justin_Bieber_-_Justice.png"  />
+                <iframe src="https://open.spotify.com/embed/track/4dd9GGN2kHb1d28yGL578m" width="300" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 <p class="popularity"><img src="{{ url_for('static', filename='heart.png') }}"> {{ track[5] }}%</p>
             </td>
             <td>
@@ -35,6 +31,17 @@
             </td>
         </tr>
         </table>
+        <span class="search_again">
+            Not what you were looking for?<br />
+            <a href="/">Click here to search again</a>
+        </span>
 		{% endif %}
+
+        {% if no_results_err %}
+        <!-- Throw an error element to the screen -->
+        <span class="error">
+            🤷 Our search produced no results! <a href="/">Try again?</a>
+        </span>
+        {% endif %}
 </body>
 </html>
