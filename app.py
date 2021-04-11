@@ -53,9 +53,11 @@ def login():
 		# 	print(idx, track['name'])
 		#print(results)
 		items = results['tracks']['items']
-		#print(json.dumps(items, indent= 4))
+		print(json.dumps(items[0]['external_urls']['spotify'], indent= 4))
+		album_url = items[0]['external_urls']['spotify']
 		song_uri = items[0]['uri']
 		track_info = getTrackFeatures(song_uri)
+		track_info.append(album_url)
 		print(track_info)
 		return render_template('index.html', track=track_info)
 		# return jsonify(results)
