@@ -23,7 +23,7 @@ def getTrackFeatures(id):
 	album = meta['album']['name']
 	artist = meta['album']['artists'][0]['name']
 	release_date = meta['album']['release_date']
-	length = meta['duration_ms']
+	length = meta['duration_ms']/1000
 	popularity = meta['popularity']
 
 	# features
